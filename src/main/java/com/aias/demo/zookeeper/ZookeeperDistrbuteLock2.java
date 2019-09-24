@@ -1,4 +1,4 @@
-package com.aias.demo;
+package com.aias.demo.zookeeper;
 
 
 import org.I0Itec.zkclient.IZkDataListener;
