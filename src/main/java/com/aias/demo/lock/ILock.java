@@ -1,10 +1,10 @@
-package com.aias.demo.zookeeper;
+package com.aias.demo.lock;
 
 
 /**
  * 分布式锁接口
  */
-public interface Lock {
+public interface ILock {
     /**
      * 获取锁
      */

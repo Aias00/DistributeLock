@@ -1,4 +1,4 @@
-package com.aias.demo.zookeeper;
+package com.aias.demo.lock.zookeeper;
 
 
 import org.I0Itec.zkclient.IZkDataListener;
@@ -7,6 +7,11 @@ import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
+/**
+ * zookeeper分布式锁第二种方式
+ * 基于相互监听
+ * 可以理解为排队，在最前面的获得锁（比较占资源）
+ */
 public class ZookeeperDistrbuteLock2 extends ZookeeperAbstractLock {
 
     private String beforePath;

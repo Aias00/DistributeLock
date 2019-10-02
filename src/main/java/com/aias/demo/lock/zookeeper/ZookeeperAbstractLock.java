@@ -1,11 +1,12 @@
-package com.aias.demo.zookeeper;
+package com.aias.demo.lock.zookeeper;
 
+import com.aias.demo.lock.ILock;
 import org.I0Itec.zkclient.ZkClient;
 
 /**
  * 将重复代码写进抽象类
  */
-public abstract class ZookeeperAbstractLock implements Lock{
+public abstract class ZookeeperAbstractLock implements ILock {
     /**
      * zookeeper连接地址
      */
