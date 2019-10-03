@@ -1,4 +1,4 @@
-package com.aias.demo.lock.zookeeper.zkClient;
+package com.aias.demo.lock.zookeeper.zkclient;
 
 
 import org.I0Itec.zkclient.IZkDataListener;
@@ -28,10 +28,12 @@ public class ZookeeperDistrbuteLock2 extends ZookeeperAbstractLock {
     @Override
     void waitLock() {
         IZkDataListener iZkDataListener = new IZkDataListener() {
+            @Override
             public void handleDataChange(String dataPath, Object data) throws Exception {
 
             }
 
+            @Override
             public void handleDataDeleted(String dataPath) throws Exception {
                 // 唤醒等待的线程
                 if (countDownLatch != null) {

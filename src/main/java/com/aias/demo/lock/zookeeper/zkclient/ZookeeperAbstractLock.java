@@ -1,4 +1,4 @@
-package com.aias.demo.lock.zookeeper.zkClient;
+package com.aias.demo.lock.zookeeper.zkclient;
 
 import com.aias.demo.lock.ILock;
 import org.I0Itec.zkclient.ZkClient;
@@ -17,6 +17,7 @@ public abstract class ZookeeperAbstractLock implements ILock {
     protected static final String PATH = "/lock";
     protected static final String PATH2 = "/lock2";
 
+    @Override
     public void getLock() {
         if(tryLock()){
             System.out.println("## 获取lock锁的资源 ##");
@@ -32,5 +33,6 @@ public abstract class ZookeeperAbstractLock implements ILock {
 
     abstract boolean tryLock();
 
+    @Override
     abstract public void unLock();
 }
